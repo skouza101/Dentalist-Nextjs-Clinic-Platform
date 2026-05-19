@@ -2,22 +2,23 @@ import React from 'react';
 import './TestimoniCard.scss';
 
 const TestimoniCard = ({testimonail}) => {
-
-    const {img, name, description, ratings} = testimonail;
+    const {name, subtext, description, ratings} = testimonail;
+    const firstLetter = name ? name.trim().charAt(0).toUpperCase() : '';
    
     return (
         <div className='col-lg-4 single-testimoni'>
             <div className="testimonial-card">
-                <div className="testimonial-img">
-                    <img src={img} alt="testimonial" />
+                <div className="testimonial-avatar">
+                    {firstLetter}
                 </div>
                 <div className="testimonial-text">
                     <h3>{name}</h3>
-                    <p>{description}</p>
+                    {subtext && <span className="testimonial-subtext">{subtext}</span>}
+                    <p className="testimonial-desc">{description}</p>
                 </div>
                 <ul className='testimonial-rating'>
                     {
-                        ratings?.map (rating => <li>{rating}</li>)
+                        ratings?.map ((rating, index) => <li key={index}>{rating}</li>)
                     }
                 </ul>
             </div>

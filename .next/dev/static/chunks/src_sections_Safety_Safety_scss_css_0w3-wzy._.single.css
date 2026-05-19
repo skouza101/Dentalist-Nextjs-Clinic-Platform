@@ -1,0 +1,17 @@
+/* [project]/src/sections/Safety/Safety.scss.css [app-client] (css) */
+.safty-section .section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.safty-section .section-title h2 {
+  max-width: inherit;
+}
+
+.safty-section .safety-video {
+  max-width: 750px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=src_sections_Safety_Safety_scss_css_0w3-wzy._.single.css.map*/

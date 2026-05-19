@@ -1,0 +1,135 @@
+/* [project]/src/components/Navbar/Navbar.scss.css [app-client] (css) */
+.main-nav {
+  z-index: 99999;
+  background: #fff;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-nav .navbar {
+  padding: 0;
+}
+
+.main-nav .navbar .logo-text {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  text-decoration: none !important;
+}
+
+.main-nav .navbar .logo-text .logo-img {
+  flex-shrink: 0;
+  width: auto;
+  height: 40px;
+}
+
+.main-nav .navbar .logo-text span {
+  color: #181945;
+  letter-spacing: -.5px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.main-nav .navbar .logo-text span.brand-dot {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: 2px;
+  display: inline-block;
+  transform: translateY(6px);
+  background-color: #583fbc !important;
+}
+
+.main-nav .navbar .logo-text:hover {
+  opacity: .95;
+}
+
+.main-nav .navbar .navbar-nav .nav-item .nav-link {
+  color: #181945;
+  margin: 10px 30px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.main-nav .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #583fbc;
+}
+
+.main-nav .navbar .language-selector {
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.main-nav .navbar .language-selector .lang-select {
+  color: #181945;
+  cursor: pointer;
+  background-color: #0000;
+  background-position: right 10px center;
+  background-size: 12px;
+  border: 2px solid #583fbc26;
+  border-radius: 30px;
+  outline: none;
+  padding: 6px 30px 6px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.main-nav .navbar .language-selector .lang-select:hover, .main-nav .navbar .language-selector .lang-select:focus {
+  color: #583fbc;
+  border-color: #583fbc;
+  box-shadow: 0 0 0 .2rem #583fbc1a;
+}
+
+@media (max-width: 575px) {
+  .main-nav {
+    padding: 10px 0;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  }
+
+  .main-nav .navbar .navbar-nav .nav-item .nav-link {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-nav {
+    padding: 10px 0;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  }
+
+  .main-nav .navbar .navbar-nav .nav-item .nav-link {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-nav {
+    padding: 15px 0;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  }
+
+  .main-nav .navbar .navbar-nav .nav-item .nav-link {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-nav {
+    padding: 20px 0;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  }
+
+  .main-nav .navbar .navbar-nav .nav-item .nav-link {
+    margin: 10px 15px;
+  }
+}
+
+/*# sourceMappingURL=src_components_Navbar_Navbar_scss_css_0w3-wzy._.single.css.map*/

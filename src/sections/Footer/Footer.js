@@ -1,51 +1,49 @@
 import React from 'react';
-import logo from '../../assets/footer_logo.png';
 import './Footer.scss';
 import { FaFacebookF, FaInstagram, FaTwitter} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import logo from '../../assets/logo.png';
 import call from '../../assets/footer/calling.png';
 import time from '../../assets/footer/time.png';
 import location from '../../assets/footer/location.png';
+import { useTranslation } from '../../LanguageContext';
 
 const Footer = () => {
+    const { t } = useTranslation();
 
     const footerMenu = [
         {
-            'name' : 'About Us',
+            'name' : t('About Us'),
             'link' : '/'
         },
         {
-            'name' : 'Dental Services',
+            'name' : t('Dental Services'),
             'link' : '/'
         },
         {
-            'name' : 'Dentist',
+            'name' : t('Dentist'),
             'link' : '/'
         },
         {
-            'name' : 'Blogs',
-            'link' : '/'
-        },
-        {
-            'name' : 'FAQs',
+            'name' : t('FAQs'),
             'link' : '/'
         }
     ];
 
     const footerContacts = [
         {
-            'title': 'Phone Number',
-            'info': '+088 123 654 987',
+            'title': t('Phone Number'),
+            'info': '05 23 35 43 57',
             'icon': call
         },
         {
-            'title': 'Open Hour',
-            'info': '09:00 AM - 18:00 PM',
+            'title': t('Open Hour'),
+            'info': t('09:00 AM - 18:00 PM'),
             'icon': time
         },
         {
-            'title': 'Clinic Address',
-            'info': '35 West Dental Street California 1004',
+            'title': t('Clinic Address'),
+            'info': t('N°, Lot Garden City Villa, 6 Av. Ben Badis'),
             'icon': location
         }
     ]
@@ -55,13 +53,15 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-5">
-                        <div className="footer-logo">
-                            <img src={logo} alt="logo" />
-                        </div>
-                        <p>Dental Care Seattle is a top-rated local practice for cosmetic, preventative, and restorative dentistry on First Hill</p>
-
+                        <Link className="footer-logo logo-text" href="/">
+                            <img src={logo.src || logo} alt="logo" className="logo-img" />
+                            <span>{t("Dentaire Al Andalus")}</span>
+                            <span className='text-primary brand-dot'></span>
+                        </Link>
+                        <p>{t("Clinique Dentaire Al Andalus is a top-rated local practice for cosmetic, preventative, and restorative dentistry")}</p>
+ 
                         <div className="social-logo">
-                            <p>Follow us on</p>
+                            <p>{t("Follow us on")}</p>
                             <ul>
                                 <li><a href="/"><FaFacebookF/></a></li>
                                 <li><a href="/"><FaTwitter/></a></li>
@@ -71,23 +71,23 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-2 col-md-2">
                         <div className="footer-link">
-                            <p>Quick Links</p>
+                            <p>{t("Quick Links")}</p>
                             <ul>
                                 {
-                                    footerMenu.map(singleMenu => <li><Link to="/">{singleMenu.name}</Link></li>)
+                                    footerMenu.map(singleMenu => <li key={singleMenu.name}><Link href="/">{singleMenu.name}</Link></li>)
                                 }
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-5">
                         <div className="footer-contact">
-                            <p>Contact & Information</p>
-
+                            <p>{t("Contact & Information")}</p>
+ 
                             {
                                 footerContacts.map(footerContact => {
-                                    return  <div className="contact-list">
+                                    return  <div className="contact-list" key={footerContact.title}>
                                                 <div className="contact-icon">
-                                                    <img src={footerContact.icon} alt="call" />
+                                                    <img src={footerContact.icon && footerContact.icon.src ? footerContact.icon.src : footerContact.icon} alt="call" />
                                                 </div>
                                                 <div className="contact-text">
                                                     <p>{footerContact.title}</p>
@@ -99,15 +99,15 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
+ 
                 <div className="copyright-area">
                     <div className='copy-text'>
-                        <p>&copy; Dentalist. All Right Reserved</p>
+                        <p>&copy; {t("Clinique Dentaire Al Andalus. All Right Reserved")}</p>
                     </div>  
                     <div className='copy-links'>
                         <ul>
-                            <li><Link to='/'>Terms of Use</Link></li>
-                            <li><Link to='/'>Privacy Policy</Link></li>
+                            <li><Link href='/'>{t("Terms of Use")}</Link></li>
+                            <li><Link href='/'>{t("Privacy Policy")}</Link></li>
                         </ul>
                     </div>                          
                 </div>

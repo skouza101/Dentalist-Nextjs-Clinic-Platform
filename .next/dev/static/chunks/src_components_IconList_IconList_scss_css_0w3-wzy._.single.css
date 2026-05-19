@@ -1,0 +1,31 @@
+/* [project]/src/components/IconList/IconList.scss.css [app-client] (css) */
+.icon-list {
+  align-items: center;
+  margin-bottom: 70px;
+  display: flex;
+}
+
+.icon-list .icon-list-text {
+  max-width: 300px;
+  margin-left: 30px;
+}
+
+.icon-list .icon-list-text h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.icon-list .icon-list-text p {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .icon-area .icon-list {
+    margin-bottom: 25px;
+  }
+}
+
+/*# sourceMappingURL=src_components_IconList_IconList_scss_css_0w3-wzy._.single.css.map*/

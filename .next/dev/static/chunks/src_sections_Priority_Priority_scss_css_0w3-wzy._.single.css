@@ -1,0 +1,116 @@
+/* [project]/src/sections/Priority/Priority.scss.css [app-client] (css) */
+.priority-section {
+  padding-bottom: 150px;
+}
+
+.priority-section .priority-img {
+  text-align: right;
+  z-index: 1;
+  margin-bottom: 30px;
+  margin-right: 60px;
+  position: relative;
+}
+
+.priority-section .priority-img:before {
+  content: "";
+  z-index: -1;
+  background: #dbeffa;
+  border-radius: 20px;
+  width: 45%;
+  height: 65%;
+  position: absolute;
+  top: -12%;
+  left: 30%;
+}
+
+.priority-section .priority-text {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.priority-section .priority-text .section-title {
+  margin-bottom: 30px;
+}
+
+.priority-section .priority-text .section-title h2 {
+  max-width: inherit;
+}
+
+.priority-section .priority-text .theme-btn {
+  margin-top: 80px;
+}
+
+@media (max-width: 575px) {
+  .priority-section {
+    padding-bottom: 20px;
+  }
+
+  .priority-section .priority-img {
+    margin-right: 0;
+  }
+
+  .priority-section .priority-img:before {
+    display: none;
+  }
+
+  .priority-section .priority-text .theme-btn {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .priority-section {
+    padding-bottom: 70px;
+  }
+
+  .priority-section .priority-img {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .priority-section .priority-img:before {
+    display: none;
+  }
+
+  .priority-section .priority-text .theme-btn {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .priority-section {
+    padding-bottom: 70px;
+  }
+
+  .priority-section .priority-img {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .priority-section .priority-img:before {
+    display: none;
+  }
+
+  .priority-section .priority-text .theme-btn {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  .priority-section {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+
+  .priority-section .priority-img:before {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .priority-section .priority-img:before {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Priority_Priority_scss_css_0w3-wzy._.single.css.map*/

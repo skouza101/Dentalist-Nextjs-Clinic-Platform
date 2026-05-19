@@ -1,0 +1,46 @@
+/* [project]/src/sections/Testimonial/Testimonial.scss.css [app-client] (css) */
+.testimoni-slider .slick-arrow {
+  display: none !important;
+}
+
+.testimonail-section .rating-summary {
+  background: #fff;
+  border-radius: 20px;
+  align-items: center;
+  gap: 16px;
+  max-width: 320px;
+  padding: 20px 28px;
+  display: flex;
+  box-shadow: 0 4px 20px #583fbc1a;
+}
+
+.testimonail-section .rating-summary .rating-score {
+  color: #181945;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.testimonail-section .rating-summary .rating-details .rating-stars {
+  color: #ff8c4b;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+
+.testimonail-section .rating-summary .rating-details .rating-label {
+  color: #74758f;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+  .testimonail-section .rating-summary {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Testimonial_Testimonial_scss_css_0w3-wzy._.single.css.map*/

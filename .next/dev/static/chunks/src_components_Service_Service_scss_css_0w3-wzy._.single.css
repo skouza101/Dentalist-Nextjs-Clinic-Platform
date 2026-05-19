@@ -1,0 +1,54 @@
+/* [project]/src/components/Service/Service.scss.css [app-client] (css) */
+.service-box {
+  text-align: center;
+  border: 1px solid #1819451a;
+  border-radius: 32px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.service-box .icon-area {
+  background: #dbdefa;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  padding: 80px;
+}
+
+.service-box .icon-area .icon-box {
+  margin: auto;
+}
+
+.service-box .service-text h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service-box .service-text h3 a {
+  color: #181945;
+  text-decoration: none;
+}
+
+.service-box .service-text p {
+  font-size: 14px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .service-box .icon-area {
+    padding: 50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-box .icon-area {
+    padding: 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .service-box .icon-area {
+    padding: 50px;
+  }
+}
+
+/*# sourceMappingURL=src_components_Service_Service_scss_css_0w3-wzy._.single.css.map*/

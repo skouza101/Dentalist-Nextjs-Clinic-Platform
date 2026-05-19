@@ -1,0 +1,69 @@
+/* [project]/src/components/TestimoniCard/TestimoniCard.scss.css [app-client] (css) */
+.single-testimoni {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 50px 10px 0;
+}
+
+.testimonial-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 32px;
+  padding: 70px 30px 30px;
+  position: relative;
+}
+
+.testimonial-card .testimonial-avatar {
+  color: #fff;
+  background: linear-gradient(135deg, #583fbc 0%, #7f6bcd 100%);
+  border: 8px solid #d9ebfa;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px 24px #583fbc33;
+}
+
+.testimonial-card .testimonial-text h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.testimonial-card .testimonial-text .testimonial-subtext {
+  color: #74758f;
+  opacity: .8;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+}
+
+.testimonial-card .testimonial-text .testimonial-desc {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.testimonial-card .testimonial-rating {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonial-card .testimonial-rating li {
+  color: #ff8c4b;
+  margin: 0 2px;
+  font-size: 25px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=src_components_TestimoniCard_TestimoniCard_scss_css_0w3-wzy._.single.css.map*/

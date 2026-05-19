@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///D:/projects/Dentalist-Dental-Clinic-React-Website/src/sections/Faq/Faq.scss"],"sourcesContent":[".faq-section {\r\n    .section-title {\r\n        text-align: center;\r\n        margin-bottom: 30px;\r\n    }\r\n\r\n    .accordion-item {\r\n        .accordion-header {\r\n           .accordion-button {\r\n                font-weight: 600;\r\n           }\r\n        }\r\n    }\r\n}\r\n\r\n// Mobile Responsive\r\n@media (max-width: 575px) {\r\n    .faq-section {\r\n        padding-bottom: 50px;\r\n    }\r\n}"],"names":[],"mappings":"AACI;;;;;AAOO;;;;AAQX;EACI"}}]
+}

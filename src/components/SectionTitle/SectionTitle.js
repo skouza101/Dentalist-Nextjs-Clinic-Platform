@@ -1,12 +1,14 @@
 import React from 'react';
 import './SectionTitle.scss';
+import { useTranslation } from '../../LanguageContext';
 
 const SectionTitle = ({subTitle, title, description}) => {
+    const { t } = useTranslation();
     return (
         <div className='section-title'>
-            <span>{subTitle}</span>
-            <h2>{title}</h2>
-            <p>{description}</p>
+            {subTitle && <span>{t(subTitle)}</span>}
+            {title && <h2>{t(title)}</h2>}
+            {description && <p>{t(description)}</p>}
         </div>
     );
 };

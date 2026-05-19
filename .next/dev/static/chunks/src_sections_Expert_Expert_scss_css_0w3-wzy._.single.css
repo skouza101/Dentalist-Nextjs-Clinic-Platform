@@ -1,0 +1,131 @@
+/* [project]/src/sections/Expert/Expert.scss.css [app-client] (css) */
+.expert-section {
+  padding: 100px 0 150px;
+}
+
+.expert-section .section-title {
+  margin-bottom: 30px;
+}
+
+.expert-section .section-title h2 {
+  max-width: inherit;
+}
+
+.expert-section .expert-text ul {
+  margin: 0;
+  padding: 0;
+}
+
+.expert-section .expert-text ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.expert-section .expert-text ul li svg {
+  color: #583fbc;
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
+}
+
+.expert-img {
+  text-align: left;
+  z-index: 1;
+  margin-bottom: 30px;
+  margin-right: 60px;
+  position: relative;
+}
+
+.expert-img:before {
+  content: "";
+  z-index: -1;
+  background: #fadbe2;
+  border-radius: 20px;
+  width: 45%;
+  height: 125%;
+  position: absolute;
+  top: -12%;
+  right: 0%;
+}
+
+@media (max-width: 575px) {
+  .expert-section {
+    padding: 50px 15px;
+  }
+
+  .expert-section .expert-text ul {
+    margin-bottom: 10px;
+  }
+
+  .expert-section .expert-text ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .expert-section .expert-text ul li svg {
+    margin-right: 5px;
+  }
+
+  .expert-section .expert-img {
+    margin-right: 0;
+  }
+
+  .expert-section .expert-img:before {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .expert-section {
+    padding: 50px 0;
+  }
+
+  .expert-section .expert-text {
+    margin-bottom: 20px;
+  }
+
+  .expert-section .expert-img {
+    margin-right: 0;
+  }
+
+  .expert-section .expert-img:before {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .expert-section {
+    padding: 50px 0;
+  }
+
+  .expert-section .expert-img {
+    margin-right: 20px;
+  }
+
+  .expert-section .expert-img:before {
+    right: -10%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .expert-section {
+    padding: 70px 0;
+  }
+
+  .expert-section .expert-img {
+    margin-right: 20px;
+  }
+
+  .expert-section .expert-img:before {
+    right: -10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .expert-section .expert-img:before {
+    right: -10%;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Expert_Expert_scss_css_0w3-wzy._.single.css.map*/

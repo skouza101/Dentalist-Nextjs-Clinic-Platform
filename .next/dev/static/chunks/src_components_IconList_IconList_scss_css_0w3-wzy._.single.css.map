@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///D:/projects/Dentalist-Dental-Clinic-React-Website/src/components/IconList/IconList.scss"],"sourcesContent":["@import'../../sass//colors.scss';\r\n\r\n.icon-list {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 70px;\r\n\r\n    .icon-list-text {\r\n        margin-left: 30px;\r\n        max-width: 300px;\r\n\r\n        h3 {\r\n            font-size: 20px;\r\n            font-weight: 600;\r\n            margin-bottom: 10px;\r\n        }\r\n\r\n        p {\r\n            font-size: 15px;\r\n            margin-bottom: 0;\r\n            font-weight: 500;\r\n        }\r\n    }\r\n}\r\n\r\n// Mobile Responsive\r\n@media (max-width:575px){\r\n    .icon-area {\r\n        .icon-list {\r\n            margin-bottom: 25px;\r\n        }\r\n    }\r\n}"],"names":[],"mappings":"AAEA;;;;;;AAKI;;;;;AAII;;;;;;AAMA;;;;;;AASR;EAEQ"}}]
+}

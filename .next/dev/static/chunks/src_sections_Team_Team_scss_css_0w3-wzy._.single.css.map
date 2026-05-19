@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///D:/projects/Dentalist-Dental-Clinic-React-Website/src/sections/Team/Team.scss"],"sourcesContent":["@import '../../sass/colors.scss';\r\n\r\n.team-section {\r\n    .section-title {\r\n        h2 {\r\n            max-width: inherit;\r\n        }\r\n    }\r\n\r\n    .team-card {\r\n        text-align: center;\r\n        margin-bottom: 30px;\r\n\r\n        .team-img {\r\n            margin-bottom: 20px;\r\n            position: relative;\r\n\r\n            &::before {\r\n                position: absolute;\r\n                top: 0;\r\n                left: 0;\r\n                right: 0;\r\n                width: 100%;\r\n                height: 100%;\r\n                background: #DBEFFA;\r\n                content: '';\r\n                z-index: -1;\r\n                border-radius: 10px;\r\n            }\r\n        }\r\n\r\n        h3 {\r\n            font-size: 18px;\r\n            font-weight: 600;\r\n        }\r\n    }\r\n}\r\n\r\n// Small Device Responsive\r\n@media (max-width: 575px) {\r\n    .team-section {\r\n        .pt-5 {\r\n            padding-top: 0 !important;\r\n        }\r\n    }\r\n}"],"names":[],"mappings":"AAIQ;;;;AAKJ;;;;;AAII;;;;;AAII;;;;;;;;;;;;;AAcJ;;;;;AAQR;EAEQ"}}]
+}

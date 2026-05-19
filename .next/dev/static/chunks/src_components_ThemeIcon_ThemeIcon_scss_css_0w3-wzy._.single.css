@@ -1,0 +1,68 @@
+/* [project]/src/components/ThemeIcon/ThemeIcon.scss.css [app-client] (css) */
+.icon-box {
+  z-index: 0;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+}
+
+.icon-box:before {
+  content: "";
+  z-index: -1;
+  opacity: .3;
+  background: #fff;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.icon-box img {
+  max-width: 50px;
+}
+
+@media (max-width: 575px) {
+  .icon-box {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .icon-box:before {
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-box img {
+    max-width: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .icon-box {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .icon-box:before {
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-box img {
+    max-width: 25px;
+  }
+}
+
+/*# sourceMappingURL=src_components_ThemeIcon_ThemeIcon_scss_css_0w3-wzy._.single.css.map*/

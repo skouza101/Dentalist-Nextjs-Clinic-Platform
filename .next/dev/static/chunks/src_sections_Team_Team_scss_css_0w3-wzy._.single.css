@@ -1,0 +1,40 @@
+/* [project]/src/sections/Team/Team.scss.css [app-client] (css) */
+.team-section .section-title h2 {
+  max-width: inherit;
+}
+
+.team-section .team-card {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-section .team-card .team-img {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.team-section .team-card .team-img:before {
+  content: "";
+  z-index: -1;
+  background: #dbeffa;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.team-section .team-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .team-section .pt-5 {
+    padding-top: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Team_Team_scss_css_0w3-wzy._.single.css.map*/

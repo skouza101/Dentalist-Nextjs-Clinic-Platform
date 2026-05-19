@@ -1,55 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Gallery.scss';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import imgOne from '../../assets/servicePage/gallery/1.png';
-import imgTwo from '../../assets/servicePage/gallery/2.png';
-import imgThree from '../../assets/servicePage/gallery/3.png';
-import imgFour from '../../assets/servicePage/gallery/4.png';
-import imgFive from '../../assets/servicePage/gallery/5.png';
-import imgSix from '../../assets/servicePage/gallery/6.png';
+import { useTranslation } from '../../LanguageContext';
+import clinic7 from '../../assets/clinic/clinic_7.jpeg';
 
 const Gallery = () => {
+    const { t } = useTranslation();
+    const [selectedImg, setSelectedImg] = useState(null);
+
+    const galleryImages = [
+        {
+            src: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80',
+            alt: t('Clinic Reception'),
+            category: 'interior',
+            span: 'wide'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
+            alt: t('Dental Operatory'),
+            category: 'equipment',
+            span: 'tall'
+        },
+        {
+            src: clinic7,
+            alt: t('Waiting Room'),
+            category: 'interior',
+            span: 'tall'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80',
+            alt: t('Modern Treatment'),
+            category: 'exterior',
+            span: 'normal'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80',
+            alt: t('State-of-the-art Tech'),
+            category: 'equipment',
+            span: 'normal'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
+            alt: t('Consultation Room'),
+            category: 'interior',
+            span: 'normal'
+        },
+    ];
+
     return (
         <section className='gallery-section pt-100 pb-70' data-aos="fade-up" data-aos-duration="2000">
             <div className="container">
-                <SectionTitle 
-                    subTitle="Gallery"
-                    title="Some proof about our services for you"
-                    description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+                <SectionTitle
+                    subTitle={t("OUR CLINIC")}
+                    title={t("Take a look inside our clinic")}
+                    description={t("Modern facilities and state-of-the-art equipment for the best dental care experience")}
                 />
-                <div className="row">
-                    <div className="col-md-5 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgOne} alt="gallery" />
+
+                <div className="gallery-grid">
+                    {galleryImages.map((image, index) => (
+                        <div
+                            className={`gallery-item gallery-item-${image.span}`}
+                            key={index}
+                            onClick={() => setSelectedImg(image)}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 100}
+                        >
+                            <img src={image.src && image.src.src ? image.src.src : image.src} alt={image.alt} />
+                            <div className="gallery-overlay">
+                                <span className="gallery-label">{image.alt}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-md-3 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgTwo} alt="gallery" />
-                        </div>
-                    </div>
-                    <div className="col-md-4 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgThree} alt="gallery" />
-                        </div>
-                    </div>
-                    <div className="col-md-3 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgFour} alt="gallery" />
-                        </div>
-                    </div>
-                    <div className="col-md-4 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgFive} alt="gallery" />
-                        </div>
-                    </div>
-                    <div className="col-md-5 col-sm-6">
-                        <div className="gallery-img">
-                            <img src={imgSix} alt="gallery" />
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
+
+            {/* Lightbox Modal */}
+            {selectedImg && (
+                <div className="gallery-lightbox" onClick={() => setSelectedImg(null)}>
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="lightbox-close" onClick={() => setSelectedImg(null)}>&times;</button>
+                        <img src={selectedImg.src && selectedImg.src.src ? selectedImg.src.src : selectedImg.src} alt={selectedImg.alt} />
+                        <p className="lightbox-caption">{selectedImg.alt}</p>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

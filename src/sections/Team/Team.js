@@ -6,7 +6,10 @@ import imgTwo from '../../assets/about/team/2.png';
 import imgThree from '../../assets/about/team/3.png';
 import imgFour from '../../assets/about/team/4.png';
 
+import { useTranslation } from '../../LanguageContext';
+
 const Team = () => {
+    const { t } = useTranslation();
 
     const teams = [
         {
@@ -35,23 +38,22 @@ const Team = () => {
                     <div className="col-lg-7">
                         <SectionTitle 
                             subTitle="Meet our Team"
-                            title="Get to know the dentalist
-                            dental Team"
+                            title="Get to know the dentalist dental Team"
                         />
                     </div>
 
                     <div className="col-lg-5">
-                        <p className='pt-5'>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <p className='pt-5'>{t("Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.")}</p>
                     </div>
                 </div>
 
                 <div className="row">
                     {
-                        teams.map (team => 
-                            <div className="col-lg-3 col-sm-6">
+                        teams.map ((team, index) => 
+                            <div className="col-lg-3 col-sm-6" key={index}>
                                 <div className="team-card">
                                     <div className="team-img">
-                                        <img src={team.img} alt="" />
+                                        <img src={team.img && team.img.src ? team.img.src : team.img} alt="" />
                                     </div>
                                     <h3>{team.name}</h3>
                                 </div>

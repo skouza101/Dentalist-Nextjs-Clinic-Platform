@@ -3,3 +3,47 @@
         display: none !important;
     }
 }
+
+.testimonail-section {
+    .rating-summary {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 20px 28px;
+        box-shadow: 0 4px 20px rgba(88, 63, 188, 0.1);
+        max-width: 320px;
+
+        .rating-score {
+            font-size: 52px;
+            font-weight: 800;
+            color: #181945;
+            line-height: 1;
+        }
+
+        .rating-details {
+            .rating-stars {
+                color: #FF8C4B;
+                font-size: 22px;
+                letter-spacing: 2px;
+                margin-bottom: 4px;
+            }
+
+            .rating-label {
+                font-size: 13px;
+                color: #74758F;
+                margin: 0;
+                font-weight: 500;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .rating-summary {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+}

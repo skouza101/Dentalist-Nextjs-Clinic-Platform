@@ -1,29 +1,27 @@
 import React from 'react';
 import './Navbar.scss';
+import Link from 'next/link';
+import { useTranslation } from '../../LanguageContext';
 import logo from './../../assets/logo.png';
-import {Link} from 'react-router-dom';
 
 const Navbar = () => {
+    const { t, language, setLanguage } = useTranslation();
 
     const navbarItems = [
         {
-            name: 'Home',
+            name: t('Home'),
             path: '/',
         },
         {
-            name: 'About Us',
+            name: t('About Us'),
             path: '/about',
         },
         {
-            name: 'Single Service',
+            name: t('Single Service'),
             path: '/singleservice',
         },
         {
-            name: 'Blogs',
-            path: '/blogs',
-        },
-        {
-            name: 'Contact Us',
+            name: t('Contact Us'),
             path: '/contact',
         }
     ];
@@ -33,9 +31,10 @@ const Navbar = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
-                        {/* Logo */}
-                        <Link className="navbar-brand" to="/">
-                            <img src={logo} alt="logo" />
+                        <Link className="navbar-brand logo-text" href="/">
+                            <img src={logo.src || logo} alt="logo" className="logo-img" />
+                            <span>{t("Dentaire Al Andalus")}</span>
+                            <span className='text-primary brand-dot'></span>
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -45,16 +44,29 @@ const Navbar = () => {
                             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                                { 
                                 navbarItems.map (navSingle =>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to={navSingle.path}>{navSingle.name}</Link>
+                                    <li className="nav-item" key={navSingle.name}>
+                                        <Link className="nav-link" href={navSingle.path}>{navSingle.name}</Link>
                                     </li>
                                     ) 
                                 }
                             </ul>
                             
+                            {/* Language Selector */}
+                            <div className="language-selector">
+                                <select 
+                                    className="form-select lang-select" 
+                                    value={language} 
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                >
+                                    <option value="en">EN</option>
+                                    <option value="fr">FR</option>
+                                    <option value="ar">AR</option>
+                                </select>
+                            </div>
+
                             {/* Navbar Button */}
                             <div className="theme-btn">
-                                <Link to="/contact">Book appointment</Link>
+                                <Link href="/contact">{t('Book appointment')}</Link>
                             </div>
                         </div>
                     </div>

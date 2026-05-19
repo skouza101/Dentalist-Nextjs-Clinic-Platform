@@ -1,38 +1,31 @@
 import React from 'react';
 import './Testimonial.scss';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import imgOne from '../../assets/testimonial/1.png';
-import imgTwo from '../../assets/testimonial/2.png';
-import imgThree from '../../assets/testimonial/3.png';
 import TestimoniCard from '../../components/TestimoniCard/TestimoniCard';
 import { AiFillStar } from "react-icons/ai";
 import Slider from "react-slick";
+import { useTranslation } from '../../LanguageContext';
 
 const Testimonial = () => {
+    const { t } = useTranslation();
 
     const testimonails = [
         {
-            'img': imgOne,
-            'name': 'Robert Fox',
-            'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
+            'name': 'Hiba Aassab',
+            'subtext': '2 reviews • 3 months ago',
+            'description' : 'Proud to recommend Clinique dentaire Al Andalus! Professional, reliable, and very welcoming',
             'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
         },
         {
-            'img': imgTwo,
-            'name': 'Albert Flores',
-            'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
+            'name': 'Hamza ahabchi',
+            'subtext': '1 review • Edited a month ago',
+            'description' : 'Smooth and professional wisdom tooth removal with no side effects very satisfied',
             'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
         },
         {
-            'img': imgThree,
-            'name': 'Bessie Cooper',
-            'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
-            'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
-        },
-        {
-            'img': imgOne,
-            'name': 'Bessie Cooper',
-            'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
+            'name': 'ilyas',
+            'subtext': '7 reviews • 6 months ago',
+            'description' : 'A very good experience. The doctor is very professional, attentive, and takes the time to explain each step of the treatment. Excellent work, I will definitely return.',
             'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
         }
     ]
@@ -72,24 +65,32 @@ const Testimonial = () => {
     return (
         <section className='testimonail-section section-bg section-common pt-100 pb-70' data-aos="fade-up" data-aos-duration="2000">
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-6">
-                        <SectionTitle 
-                        subTitle="TESTIMONIAL"
-                        title="What people have said about us"
+                <div className="row align-items-center">
+                    <div className="col-lg-7">
+                        <SectionTitle
+                            subTitle={t("TESTIMONIAL")}
+                            title={t("What people have said about us")}
                         />
                     </div>
-                    <div className="col-lg-6">
-                        <p className="pt-5">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts </p>
+                    <div className="col-lg-5">
+                        <div className="rating-summary">
+                            <div className="rating-score">5.0</div>
+                            <div className="rating-details">
+                                <div className="rating-stars">
+                                    <AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/><AiFillStar/>
+                                </div>
+                                <p className="rating-label">{t("All reviews rated 5 stars on Google Maps")}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <Slider {...settings} className="testimoni-slider">
                     {
-                        testimonails.map(testimonail => <TestimoniCard testimonail={testimonail} />)
+                        testimonails.map((testimonail, index) => <TestimoniCard key={index} testimonail={testimonail} />)
                     }
                 </Slider>
-               
+
             </div>
         </section>
     );

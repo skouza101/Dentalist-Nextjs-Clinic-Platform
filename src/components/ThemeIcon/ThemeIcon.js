@@ -4,7 +4,7 @@ import './ThemeIcon.scss';
 const ThemeIcon = (icon) => {
     return (
         <div className='icon-box'>
-            <img src={icon.icon} alt="icon" />
+            <img src={icon.icon && icon.icon.src ? icon.icon.src : icon.icon} alt="icon" />
         </div>
     );
 };

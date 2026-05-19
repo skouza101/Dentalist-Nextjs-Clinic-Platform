@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import ThemeIcon from '../ThemeIcon/ThemeIcon';
 import './Service.scss';
+import { useTranslation } from '../../LanguageContext';
 
 const Service = ({serviceList}) => {
+    const { t } = useTranslation();
     const {title,description, icon} = serviceList;
  
     return (
@@ -15,8 +17,8 @@ const Service = ({serviceList}) => {
                     </div>
                 </div>
                 <div className="service-text">
-                    <h3><Link to="/singleservice">{title}</Link></h3>
-                    <p>{description}</p>
+                    <h3><Link href="/singleservice">{t(title)}</Link></h3>
+                    <p>{t(description)}</p>
                 </div>
            </div>
         </div>

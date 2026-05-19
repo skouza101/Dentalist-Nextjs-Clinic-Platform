@@ -1,0 +1,51 @@
+/* [project]/src/sections/Services/Services.scss.css [app-client] (css) */
+.service-section .service-title-text {
+  max-width: 600px;
+  margin: 0 0 0 auto;
+  padding-top: 50px;
+  font-weight: 500;
+}
+
+.service-section .services-link {
+  margin: 50px 0 30px;
+}
+
+.service-section .services-link a {
+  color: #583fbc;
+  background: #583fbc1e;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service-section .services-link a svg {
+  margin-left: 10px;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+
+@media (max-width: 575px) {
+  .service-section .service-title-text {
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .service-section .service-title-text {
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-section .service-title-text {
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Services_Services_scss_css_0w3-wzy._.single.css.map*/

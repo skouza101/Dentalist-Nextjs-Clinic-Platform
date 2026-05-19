@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import priorityImg from '../../assets/about/priority.png';
 import './Priority.scss';
 
+import { useTranslation } from '../../LanguageContext';
+
 const Priority = () => {
+    const { t } = useTranslation();
     return (
         <section className='priority-section emergency-section' data-aos="fade-up" data-aos-duration="2000">
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6">
                         <div className="priority-img">
-                            <img src={priorityImg} alt="Emergency" />
+                            <img src={priorityImg.src || priorityImg} alt="Emergency" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
@@ -23,7 +26,7 @@ const Priority = () => {
                             />
 
                             <div className="theme-btn">
-                                <Link to='/'>Book an appointment</Link>
+                                <Link href='/'>{t("Book an appointment")}</Link>
                             </div>
                         </div>
                     </div>

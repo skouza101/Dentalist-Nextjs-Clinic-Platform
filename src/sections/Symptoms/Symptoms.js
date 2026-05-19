@@ -13,27 +13,27 @@ const Symptoms = () => {
         {
             'icon' : iconOne,
             'title' : 'Spontaneous pain',
-            'description':'Spontaneous pain even when youre not eating or drinking' 
+            'description': 'Spontaneous pain even when youre not eating or drinking' 
         },
         {
             'icon' : iconTwo,
             'title' : 'Discoloration of tooth',
-            'description':'Darkening or discoloration of a tooth' 
+            'description': 'Darkening or discoloration of a tooth' 
         },
         {
             'icon' : iconThree,
             'title' : 'Middle night pain',
-            'description':'Pain that wakes you up in the middle of the night' 
+            'description': 'Pain that wakes you up in the middle of the night' 
         },
         {
             'icon' : iconFour,
             'title' : 'Tenderness in gums',
-            'description':'From floss bosses to sweet tooths, every mouth is welcome.' 
+            'description': 'From floss bosses to sweet tooths, every mouth is welcome.' 
         },
         {
             'icon' : iconFive,
             'title' : 'Extreme sensitivity',
-            'description':'Extreme sensitivity to cold or heat when your’e drink or eat' 
+            'description': 'Extreme sensitivity to cold or heat when your’e drink or eat' 
         }
     ]
 
@@ -48,8 +48,9 @@ const Symptoms = () => {
 
                 <div className="row">
                     {
-                        symptomsData.map(singleSymptoms => 
+                        symptomsData.map((singleSymptoms, idx) => 
                             <IconList 
+                                key={idx}
                                 icon={singleSymptoms.icon}
                                 title={singleSymptoms.title}
                                 description={singleSymptoms.description}

@@ -1,0 +1,17 @@
+/* [project]/src/sections/Faq/Faq.scss.css [app-client] (css) */
+.faq-section .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-section .accordion-item .accordion-header .accordion-button {
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .faq-section {
+    padding-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Faq_Faq_scss_css_0w3-wzy._.single.css.map*/

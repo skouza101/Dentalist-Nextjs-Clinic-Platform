@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///D:/projects/Dentalist-Dental-Clinic-React-Website/src/components/Skeleton/Skeleton.scss"],"sourcesContent":[".premium-skeleton-shimmer {\n    display: inline-block;\n    position: relative;\n    overflow: hidden;\n    background: linear-gradient(\n        90deg,\n        rgba(240, 242, 245, 0.8) 25%,\n        rgba(225, 228, 232, 0.9) 37%,\n        rgba(240, 242, 245, 0.8) 63%\n    );\n    background-size: 400% 100%;\n    animation: premium-shimmer-animation 1.5s ease-in-out infinite;\n}\n\n@keyframes premium-shimmer-animation {\n    0% {\n        background-position: 100% 50%;\n    }\n    100% {\n        background-position: 0% 50%;\n    }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;AAcA"}}]
+}

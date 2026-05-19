@@ -1,0 +1,22 @@
+.premium-skeleton-shimmer {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        90deg,
+        rgba(240, 242, 245, 0.8) 25%,
+        rgba(225, 228, 232, 0.9) 37%,
+        rgba(240, 242, 245, 0.8) 63%
+    );
+    background-size: 400% 100%;
+    animation: premium-shimmer-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes premium-shimmer-animation {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

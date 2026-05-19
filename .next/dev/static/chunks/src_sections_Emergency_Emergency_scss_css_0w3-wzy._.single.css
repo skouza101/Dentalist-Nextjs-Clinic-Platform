@@ -1,0 +1,107 @@
+/* [project]/src/sections/Emergency/Emergency.scss.css [app-client] (css) */
+.emergency-section {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.emergency-section .emergency-img {
+  text-align: right;
+  z-index: 1;
+  margin-bottom: 30px;
+  margin-right: 60px;
+  position: relative;
+}
+
+.emergency-section .emergency-img:before {
+  content: "";
+  z-index: -1;
+  background: #dbeffa;
+  border-radius: 20px;
+  width: 45%;
+  height: 125%;
+  position: absolute;
+  top: -12%;
+  left: 35%;
+}
+
+.emergency-section .emergency-text {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.emergency-section .emergency-text .section-title {
+  margin-bottom: 30px;
+}
+
+.emergency-section .emergency-text .section-title h2 {
+  max-width: inherit;
+}
+
+.emergency-section .emergency-text .theme-btn {
+  margin-top: 80px;
+}
+
+@media (max-width: 575px) {
+  .emergency-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .emergency-section .emergency-img {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .emergency-section .emergency-img:before {
+    display: none;
+  }
+
+  .emergency-section .emergency-text .theme-btn {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .emergency-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .emergency-section .emergency-img {
+    text-align: center;
+  }
+
+  .emergency-section .emergency-img:before {
+    display: none;
+  }
+
+  .emergency-section .emergency-text .theme-btn {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 758px) and (max-width: 991px) {
+  .emergency-section {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .emergency-section .emergency-img {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .emergency-section .emergency-img:before {
+    display: none;
+  }
+
+  .emergency-section .emergency-text .section-title h2 {
+    font-size: 25px;
+  }
+
+  .emergency-section .emergency-text .theme-btn {
+    margin-top: 25px;
+  }
+}
+
+/*# sourceMappingURL=src_sections_Emergency_Emergency_scss_css_0w3-wzy._.single.css.map*/

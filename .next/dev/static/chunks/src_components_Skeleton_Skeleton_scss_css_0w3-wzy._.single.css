@@ -1,0 +1,20 @@
+/* [project]/src/components/Skeleton/Skeleton.scss.css [app-client] (css) */
+.premium-skeleton-shimmer {
+  background: linear-gradient(90deg, #f0f2f5cc 25%, #e1e4e8e6 37%, #f0f2f5cc 63%) 0 0 / 400% 100%;
+  animation: 1.5s ease-in-out infinite premium-shimmer-animation;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes premium-shimmer-animation {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+/*# sourceMappingURL=src_components_Skeleton_Skeleton_scss_css_0w3-wzy._.single.css.map*/

@@ -1,0 +1,31 @@
+import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import Appointment from '../sections/Appointment/Appointment';
+import Banner from '../sections/Banner/Banner';
+import Emergency from '../sections/Emergency/Emergency';
+import Expert from '../sections/Expert/Expert';
+import Features from '../sections/Features/Features';
+import Footer from '../sections/Footer/Footer';
+import Gallery from '../sections/Gallery/Gallery';
+import Services from '../sections/Services/Services';
+import Testimonial from '../sections/Testimonial/Testimonial';
+
+const Home = () => {
+
+    return (
+        <>
+            <Navbar/>
+            <Banner/>
+            <Services/>
+            <Emergency/>
+            <Features />
+            <Expert/>
+            <Gallery/>
+            <Testimonial/>
+            <Appointment/>
+            <Footer/>
+        </>
+    );
+};
+
+export default Home;
